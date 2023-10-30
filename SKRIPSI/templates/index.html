@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skripsi-Web</title>
+</head>
+<body>
+    <div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3>Selamat Datang</h3>
+                        <br>
+                        <br>
+                        <h4>"Sistem Rekomendasi Penentuan Topik Skripsi"</h4>
+                        <input type="submit" name="" value="S1 - Informatika"/><br/>
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        </ul>
+                        <form action="{{url_for('predict')}}" method="post">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Penentuan Topik Skripsi</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="NAMA" class="form-control" placeholder="NAMA *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="NIM" class="form-control" placeholder="NIM *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="REKAYASA_PL" class="form-control" placeholder="REKAYASA_PL *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="DATA_MINING" class="form-control" placeholder="Data Mining *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="PEMROG" class="form-control" placeholder="Pemrograman *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="MACHINE" class="form-control"  placeholder="Machine Learning *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="DEEP_LEARNING" class="form-control" placeholder="DEEP LEARNING*" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="BIG_DATA" class="form-control" placeholder="BIG DATA *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="PBA" class="form-control" placeholder="PBA *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="UJI_KPL" class="form-control"  placeholder="Uji Kpl *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="DESAIN_ANTARMUKA" class="form-control" placeholder="Desain Antarmuka *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <input type="text" name="GAME_DEVELOP" class="form-control"  placeholder="Game Develop*" value="" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="WEB_SEMANTIK" class="form-control" placeholder="Web Semantik *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="VISUALISASI_DATA" class="form-control" placeholder="Visualisasi Data *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" class="btnRegister"  value="Rekomendasi"/>
+                                        </div>
+                                    </div>
+                                        </form>
+                                        <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <h5 for="result">Hasil Rekomendasi</h5>
+                                                <input type="text" class="form-control" name="OUTCOME" placeholder="Hasil Prediksi *" value="{{ data }}"disabled />
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                    
+                                                <input type="text" class="form-control" name="name" placeholder="Nama *" value="{{ nama }}" disabled/>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                            
+                                                <input type="text" class="form-control" name="nim" placeholder="NIM *" value="{{ nim }}" disabled />
+                                            </div>
+                                        </div> 
+                                        <a href="{{url_for('referensi')}}" class="ForgetPwd" style="color: blue;">Referensi</a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+  
+
+
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+</body>
+</html>
